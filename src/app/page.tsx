@@ -44,11 +44,11 @@ export default function Home() {
             />
           </div>
           <h1 className="text-4xl font-bold mb-6">
-            Turning coffee into code and chaos into cloud solutions 🚀
+            If you have a technical problem, and no one else can help... ✨
           </h1>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Tech wizard who made systems 40% faster by telling computers what to do (nicely). 
-            When I'm not automating the boring stuff, I'm probably debugging your cloud while looking incredibly cool doing it. 😎
+            Technical Support Engineer who thrives on solving the unsolvable. From cloud automation to system optimization, 
+            I'm the person you call when things get challenging. Making systems 40% faster is just the beginning.
           </p>
           <Link href="#contact" className="inline-block bg-black text-white px-6 py-3 rounded-full text-sm hover:bg-gray-800 transition-all">
             Learn More →
