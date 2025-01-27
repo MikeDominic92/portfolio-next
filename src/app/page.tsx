@@ -7,7 +7,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <div className="text-left space-y-8">
-          <div className="relative w-32 h-32 overflow-hidden float-animation">
+          <div className="relative w-32 h-32 overflow-hidden float-animation profile-tooltip">
             <div className="w-full h-full rounded-full overflow-hidden shadow-2xl">
               <Image
                 src="/images/profile.jpg"
