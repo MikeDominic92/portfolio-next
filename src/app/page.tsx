@@ -170,7 +170,7 @@ export default function Home() {
         {/* Social Links */}
         <div className="flex justify-center items-center gap-8 mt-24">
           <Link 
-            href="https://linkedin.com/in/mdhlee" 
+            href="https://www.linkedin.com/in/mdhlee/" 
             target="_blank" 
             className="hover:text-gray-600 transition-colors"
           >
