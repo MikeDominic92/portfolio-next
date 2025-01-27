@@ -34,24 +34,23 @@ export default function Home() {
 
         {/* Hero Section */}
         <section className="text-center mb-32">
-          <div className="relative w-24 h-24 mx-auto mb-8 profile-tooltip">
+          <div className="relative w-32 h-32 mx-auto mb-8">
             <Image
               src="/images/profile.jpg"
               alt="Michael Hoang"
-              fill
-              className="rounded-full object-cover"
-              sizes="(max-width: 96px) 100vw, 96px"
+              width={128}
+              height={128}
+              className="rounded-full"
             />
           </div>
-          <h1 className="text-4xl font-normal mb-4">
-            Building digital<br />
-            products, brands, and<br />
-            experience.
+          <h1 className="text-4xl font-bold mb-6">
+            Revolutionizing cloud support through intelligent automation
           </h1>
-          <Link 
-            href="#contact"
-            className="inline-block bg-black text-white px-6 py-3 rounded-full text-sm hover:bg-gray-800 transition-all"
-          >
+          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+            Driven Technical Support Engineer enhancing system efficiency by 40% with Python scripting and RAG models. 
+            Pioneering innovative solutions for cloud automation and support excellence.
+          </p>
+          <Link href="#contact" className="inline-block bg-black text-white px-6 py-3 rounded-full text-sm hover:bg-gray-800 transition-all">
             Learn More →
           </Link>
         </section>
@@ -69,39 +68,50 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section className="text-center mb-32">
-          <h2 className="text-2xl mb-16">
-            Collaborate with brands and agencies<br />
-            to create impactful results.
-          </h2>
-          <div className="grid grid-cols-4 gap-8">
-            <div className="text-left">
-              <div className="w-12 h-12 mb-6 bg-gray-100 rounded-lg flex items-center justify-center">
-                <Image src="/icons/ux.svg" alt="UX & UI" width={24} height={24} />
-              </div>
-              <h3 className="text-lg mb-2">UX & UI</h3>
-              <p className="text-sm text-gray-600">Designing interfaces that are intuitive, efficient, and enjoyable to use.</p>
+        <section className="mb-32">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold">
+              Core Competencies
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="p-6">
+              <Image src="/icons/ux.svg" alt="Cloud & VPS" width={40} height={40} className="mb-4" />
+              <h3 className="text-xl font-bold mb-2">Cloud & VPS</h3>
+              <p className="text-gray-600">AWS, GCP, Azure with Kubernetes, Docker, and Terraform expertise.</p>
             </div>
-            <div className="text-left">
-              <div className="w-12 h-12 mb-6 bg-gray-100 rounded-lg flex items-center justify-center">
-                <Image src="/icons/mobile.svg" alt="Mobile" width={24} height={24} />
-              </div>
-              <h3 className="text-lg mb-2">Web & Mobile App</h3>
-              <p className="text-sm text-gray-600">Building responsive and dynamic web and mobile applications.</p>
+            <div className="p-6">
+              <Image src="/icons/mobile.svg" alt="Technical Support" width={40} height={40} className="mb-4" />
+              <h3 className="text-xl font-bold mb-2">Technical Support</h3>
+              <p className="text-gray-600">Windows, Linux environments, troubleshooting, and escalation management.</p>
             </div>
-            <div className="text-left">
-              <div className="w-12 h-12 mb-6 bg-gray-100 rounded-lg flex items-center justify-center">
-                <Image src="/icons/design.svg" alt="Design" width={24} height={24} />
-              </div>
-              <h3 className="text-lg mb-2">Design & Creative</h3>
-              <p className="text-sm text-gray-600">Crafting unique branding and creative solutions.</p>
+            <div className="p-6">
+              <Image src="/icons/design.svg" alt="Automation" width={40} height={40} className="mb-4" />
+              <h3 className="text-xl font-bold mb-2">Automation</h3>
+              <p className="text-gray-600">Python automation, RAG models, Bash scripting, and PowerShell expertise.</p>
             </div>
-            <div className="text-left">
-              <div className="w-12 h-12 mb-6 bg-gray-100 rounded-lg flex items-center justify-center">
-                <Image src="/icons/dev.svg" alt="Development" width={24} height={24} />
-              </div>
-              <h3 className="text-lg mb-2">Development</h3>
-              <p className="text-sm text-gray-600">Bringing your ideas to life with the latest technology.</p>
+            <div className="p-6">
+              <Image src="/icons/dev.svg" alt="Development" width={40} height={40} className="mb-4" />
+              <h3 className="text-xl font-bold mb-2">Development</h3>
+              <p className="text-gray-600">CI/CD pipelines with Jenkins, GitHub Actions, and GitLab CI/CD.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="mb-32">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-6">
+              <div className="text-4xl font-bold mb-2">40%</div>
+              <p className="text-gray-600">System Efficiency Boost</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="text-4xl font-bold mb-2">99.9%</div>
+              <p className="text-gray-600">System Uptime</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="text-4xl font-bold mb-2">50%</div>
+              <p className="text-gray-600">Faster Issue Resolution</p>
             </div>
           </div>
         </section>
