@@ -36,7 +36,7 @@ export default function Home() {
         <section className="text-center mb-32">
           <div className="relative w-32 h-32 mx-auto mb-12 profile-tooltip">
             <Link 
-              href="https://www.linkedin.com/in/michael-hoang-85b070b8/"
+              href="https://www.linkedin.com/in/mdhlee/"
               target="_blank"
               rel="noopener noreferrer"
               className="block"
@@ -116,10 +116,10 @@ export default function Home() {
         {/* Need Help Section */}
         <section className="need-help-section mb-32 py-20">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl font-light mb-6 text-white">
+            <h2 className="text-4xl font-light mb-6 hero-title">
               Need Help?
             </h2>
-            <p className="text-gray-300 mb-8 text-lg leading-relaxed max-w-2xl mx-auto">
+            <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-2xl mx-auto">
               From troubleshooting complex systems to implementing automated solutions, 
               I'm here to transform your technical challenges into success stories.
             </p>
@@ -127,17 +127,17 @@ export default function Home() {
               <div className="service-card p-6 rounded-2xl">
                 <div className="text-2xl mb-2">🔍</div>
                 <h3 className="text-xl font-semibold mb-2">Diagnose</h3>
-                <p className="text-gray-300">Quick and accurate problem identification</p>
+                <p className="text-gray-600">Quick and accurate problem identification</p>
               </div>
               <div className="service-card p-6 rounded-2xl">
                 <div className="text-2xl mb-2">⚡</div>
                 <h3 className="text-xl font-semibold mb-2">Solve</h3>
-                <p className="text-gray-300">Efficient and effective solutions</p>
+                <p className="text-gray-600">Efficient and effective solutions</p>
               </div>
               <div className="service-card p-6 rounded-2xl">
                 <div className="text-2xl mb-2">🚀</div>
                 <h3 className="text-xl font-semibold mb-2">Optimize</h3>
-                <p className="text-gray-300">Continuous improvement and automation</p>
+                <p className="text-gray-600">Continuous improvement and automation</p>
               </div>
             </div>
             <Link 
