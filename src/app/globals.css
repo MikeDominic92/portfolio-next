@@ -3,68 +3,83 @@
 @tailwind utilities;
 
 :root {
-  /* Modern neutral color palette */
-  --color-primary: #2D3142;    /* Deep blue-grey */
-  --color-secondary: #4F5D75;  /* Medium slate */
-  --color-accent: #BFC0C0;     /* Soft silver */
+  /* Clean, modern color palette inspired by the design */
+  --color-primary: #E67E22;    /* Coral orange */
+  --color-secondary: #F39C12;  /* Lighter orange */
+  --color-accent: #D35400;     /* Deep orange */
+  --color-background: #ffffff; /* Pure white */
+  --color-surface: #F8FAFC;    /* Very light gray */
+  --color-text: #2C3E50;       /* Deep blue-gray */
+  --color-text-muted: #94A3B8; /* Muted text */
   
   --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  --gradient-dark: linear-gradient(180deg, rgba(45, 49, 66, 0.03) 0%, rgba(45, 49, 66, 0.08) 100%);
-  --gradient-light: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+  --gradient-surface: linear-gradient(180deg, var(--color-background) 0%, var(--color-surface) 100%);
 }
 
 body {
-  color: var(--color-primary);
-  background: #fff;
+  color: var(--color-text);
+  background: var(--color-background);
   font-feature-settings: "salt" 1, "ss01" 1, "ss02" 1;
 }
 
+.text-gray-600 {
+  color: var(--color-text-muted);
+}
+
+.bg-gray-50 {
+  background-color: var(--color-surface);
+}
+
+main {
+  background: var(--color-background);
+  border-radius: 2rem;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.03);
+}
+
 .hero-title {
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  color: var(--color-text);
+}
+
+.hero-title span {
+  display: block;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-top: 0.5rem;
 }
 
 .hero-button {
-  background: var(--gradient-primary);
+  background: var(--color-primary);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 15px rgba(230, 126, 34, 0.2);
 }
 
 .hero-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(45, 49, 66, 0.2);
-}
-
-.hero-button::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.hero-button:hover::after {
-  opacity: 1;
+  box-shadow: 0 8px 25px rgba(230, 126, 34, 0.3);
+  background: var(--color-secondary);
 }
 
 .need-help-section {
-  background: var(--gradient-dark);
+  background: var(--color-surface);
   position: relative;
+  border-radius: 2rem;
+  margin: 2rem;
+  padding: 4rem 2rem;
+  box-shadow: inset 0 0 100px rgba(230, 126, 34, 0.05);
 }
 
 .service-card {
-  background: white;
-  border: 1px solid rgba(45, 49, 66, 0.1);
+  background: var(--color-background);
+  border: 1px solid rgba(230, 126, 34, 0.1);
   transition: all 0.3s ease;
   position: relative;
+  box-shadow: 0 4px 20px rgba(230, 126, 34, 0.05);
+  border-radius: 1rem;
 }
 
 .service-card::before {
@@ -75,6 +90,7 @@ body {
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 0;
+  border-radius: inherit;
 }
 
 .service-card > * {
@@ -84,16 +100,24 @@ body {
 
 .service-card:hover {
   transform: translateY(-5px);
-  border-color: transparent;
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 30px rgba(230, 126, 34, 0.1);
 }
 
 .service-card:hover::before {
-  opacity: 1;
+  opacity: 0.05;
 }
 
-.service-card:hover h3,
-.service-card:hover p {
-  color: white;
+.service-card:hover h3 {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.service-card h3 {
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
 /* Profile tooltip */
@@ -108,7 +132,7 @@ body {
   top: -45px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--gradient-primary);
+  background: var(--color-primary);
   color: white;
   padding: 8px 16px;
   border-radius: 20px;
@@ -118,7 +142,7 @@ body {
   visibility: hidden;
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(45, 49, 66, 0.2);
+  box-shadow: 0 4px 20px rgba(230, 126, 34, 0.2);
 }
 
 .profile-tooltip::after {
@@ -139,6 +163,48 @@ body {
 .profile-tooltip:hover::after {
   opacity: 1;
   visibility: visible;
+}
+
+/* Navigation */
+nav a {
+  color: var(--color-text-muted);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--color-primary);
+  letter-spacing: 0;
+}
+
+/* Partner logos */
+.opacity-60 img {
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+.opacity-60 img:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+/* Stats */
+.text-4xl {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* Secondary button style */
+.secondary-button {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+  background: var(--color-primary);
+  color: white;
 }
 
 /* Add elegant transitions */
