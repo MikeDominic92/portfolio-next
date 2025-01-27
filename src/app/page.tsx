@@ -34,7 +34,7 @@ export default function Home() {
 
         {/* Hero Section */}
         <section className="text-center mb-32">
-          <div className="relative w-32 h-32 mx-auto mb-8">
+          <div className="relative w-32 h-32 mx-auto mb-8 profile-tooltip">
             <Image
               src="/images/profile.jpg"
               alt="Michael Hoang"
@@ -44,11 +44,11 @@ export default function Home() {
             />
           </div>
           <h1 className="text-4xl font-bold mb-6">
-            Revolutionizing cloud support through intelligent automation
+            Turning coffee into code and chaos into cloud solutions 🚀
           </h1>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Driven Technical Support Engineer enhancing system efficiency by 40% with Python scripting and RAG models. 
-            Pioneering innovative solutions for cloud automation and support excellence.
+            Tech wizard who made systems 40% faster by telling computers what to do (nicely). 
+            When I'm not automating the boring stuff, I'm probably debugging your cloud while looking incredibly cool doing it. 😎
           </p>
           <Link href="#contact" className="inline-block bg-black text-white px-6 py-3 rounded-full text-sm hover:bg-gray-800 transition-all">
             Learn More →
