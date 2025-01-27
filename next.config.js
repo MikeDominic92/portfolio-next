@@ -4,13 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/portfolio-next' : '',
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  basePath: '/portfolio-next',
+  assetPrefix: '/portfolio-next/',
 }
 
 module.exports = nextConfig
