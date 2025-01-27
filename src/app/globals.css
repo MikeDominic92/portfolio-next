@@ -3,14 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --background: 0 0% 98%;
-  --foreground: 0 0% 10%;
+  --background: 210 50% 98%;
+  --foreground: 210 40% 10%;
   --accent: 230 100% 65%;
+  --accent-foreground: 210 40% 98%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215.4 16.3% 46.9%;
 }
 
 body {
   background: hsl(var(--background));
   color: hsl(var(--foreground));
+  font-feature-settings: "rlig" 1, "calt" 1;
 }
 
 .container {
@@ -21,8 +25,11 @@ body {
 
 .rounded-container {
   border-radius: 2.5rem;
-  background: white;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.03);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  box-shadow: 
+    0 0 50px rgba(0, 0, 0, 0.03),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
   overflow: hidden;
   position: relative;
 }
@@ -30,17 +37,15 @@ body {
 .rounded-container::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.1), transparent 70%);
+  pointer-events: none;
 }
 
 /* Custom animations */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-10px) rotate(1deg); }
 }
 
 .float-animation {
@@ -54,62 +59,54 @@ body {
 }
 
 .gradient-bg {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #4f46e5, #0ea5e9, #6366f1, #8b5cf6);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, hsl(var(--accent)), hsl(calc(var(--accent) + 60deg)));
+  background: linear-gradient(135deg, #4f46e5, #0ea5e9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.partner-logo {
-  filter: grayscale(100%);
-  opacity: 0.5;
-  transition: all 0.3s ease;
-}
-
-.partner-logo:hover {
-  filter: grayscale(0);
-  opacity: 1;
-}
-
-/* Glass effect */
 .glass {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
 }
 
 /* Hover effects */
 .hover-lift {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-lift:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transform: translateY(-4px);
+  box-shadow: 
+    0 12px 24px rgba(0, 0, 0, 0.05),
+    0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Scroll animations */
-.fade-up {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+/* Skill tags */
+.skill-tag {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(14, 165, 233, 0.1));
+  border: 1px solid rgba(79, 70, 229, 0.2);
+  transition: all 0.3s ease;
 }
 
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
+.skill-tag:hover {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.2), rgba(14, 165, 233, 0.2));
+  border-color: rgba(79, 70, 229, 0.3);
+  transform: translateY(-1px);
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -117,10 +114,35 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
+  background: rgba(79, 70, 229, 0.2);
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(79, 70, 229, 0.3);
+}
+
+/* Button styles */
+.primary-button {
+  background: linear-gradient(135deg, #4f46e5, #0ea5e9);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.primary-button:hover {
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3);
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(79, 70, 229, 0.2);
+  transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(79, 70, 229, 0.3);
+  transform: translateY(-2px);
 }

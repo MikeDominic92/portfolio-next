@@ -8,7 +8,7 @@ export default function Home() {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <div className="text-left space-y-8">
           <div className="relative w-32 h-32 overflow-hidden float-animation">
-            <div className="w-full h-full rounded-full overflow-hidden">
+            <div className="w-full h-full rounded-full overflow-hidden shadow-2xl">
               <Image
                 src="/images/profile.jpg"
                 alt="Michael Hoang"
@@ -18,7 +18,7 @@ export default function Home() {
                 style={{ borderRadius: '50%' }}
               />
             </div>
-            <span className="absolute -right-2 -bottom-2 text-lg">👋</span>
+            <span className="absolute -right-2 -bottom-2 text-2xl">👋</span>
           </div>
           <h1 className="text-5xl font-medium gradient-text leading-tight">
             Michael Hoang
@@ -29,22 +29,38 @@ export default function Home() {
           <div className="flex flex-wrap gap-4">
             <Link 
               href="#contact" 
-              className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors hover-lift"
+              className="primary-button px-8 py-4 rounded-full"
             >
               Let's talk →
             </Link>
             <Link 
               href="/resume/michael-hoang-resume.pdf"
-              className="border border-gray-200 px-8 py-4 rounded-full hover:bg-gray-50 transition-colors hover-lift"
+              className="secondary-button px-8 py-4 rounded-full"
               target="_blank"
             >
               View Resume
             </Link>
           </div>
-          <div className="flex flex-wrap gap-4 text-sm text-gray-600">
-            <a href="mailto:MDChoang92@gmail.com" className="hover:text-gray-900">MDChoang92@gmail.com</a>
-            <a href="tel:+1-610-741-8676" className="hover:text-gray-900">+1-610-741-8676</a>
-            <span>New York</span>
+          <div className="flex flex-wrap gap-6 text-sm text-gray-600">
+            <a href="mailto:mdcheung92@gmail.com" className="hover:text-gray-900 flex items-center gap-2">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              mdcheung92@gmail.com
+            </a>
+            <a href="tel:+1-610-741-8676" className="hover:text-gray-900 flex items-center gap-2">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              +1-610-741-8676
+            </a>
+            <span className="flex items-center gap-2">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              New York
+            </span>
           </div>
         </div>
         <div className="relative h-[500px] gradient-bg rounded-3xl overflow-hidden">
@@ -147,7 +163,7 @@ export default function Home() {
           </p>
           <div className="flex justify-center gap-4">
             <Link 
-              href="mailto:MDChoang92@gmail.com"
+              href="mailto:mdcheung92@gmail.com"
               className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors hover-lift"
             >
               Email Me
