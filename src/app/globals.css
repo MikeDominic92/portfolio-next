@@ -3,20 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --accent-gradient: linear-gradient(135deg, #000 0%, #333 100%);
+  /* Modern neutral color palette */
+  --color-primary: #2D3142;    /* Deep blue-grey */
+  --color-secondary: #4F5D75;  /* Medium slate */
+  --color-accent: #BFC0C0;     /* Soft silver */
+  
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  --gradient-dark: linear-gradient(135deg, #1a1d29 0%, #2D3142 100%);
+  --gradient-light: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: var(--color-primary);
   background: #fff;
   font-feature-settings: "salt" 1, "ss01" 1, "ss02" 1;
 }
 
 .hero-title {
-  background: var(--accent-gradient);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -24,7 +28,7 @@ body {
 }
 
 .hero-button {
-  background: var(--accent-gradient);
+  background: var(--gradient-primary);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -32,7 +36,7 @@ body {
 
 .hero-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(45, 49, 66, 0.2);
 }
 
 .hero-button::after {
@@ -51,6 +55,24 @@ body {
   opacity: 1;
 }
 
+.need-help-section {
+  background: var(--gradient-dark);
+  color: white;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
 /* Profile tooltip */
 .profile-tooltip {
   position: relative;
@@ -63,7 +85,7 @@ body {
   top: -45px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--accent-gradient);
+  background: var(--gradient-primary);
   color: white;
   padding: 8px 16px;
   border-radius: 20px;
@@ -73,7 +95,7 @@ body {
   visibility: hidden;
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(45, 49, 66, 0.2);
 }
 
 .profile-tooltip::after {
@@ -84,7 +106,7 @@ body {
   transform: translateX(-50%);
   border-width: 5px;
   border-style: solid;
-  border-color: #000 transparent transparent transparent;
+  border-color: var(--color-primary) transparent transparent transparent;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
