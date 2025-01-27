@@ -167,14 +167,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contact Section */}
-        <div className="text-center mt-24">
-          <h2 className="text-3xl font-bold mb-8">Tell me about your next project</h2>
-          <Link href="mailto:mdcheung92@gmail.com" className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-colors">
-            Let's Talk →
-          </Link>
-        </div>
-
         {/* Social Links */}
         <div className="flex justify-center items-center gap-8 mt-24">
           <Link 
