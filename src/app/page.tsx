@@ -113,6 +113,42 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Need Help Section */}
+        <section className="mb-32 bg-gradient-to-r from-gray-50 to-gray-100 py-20">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl font-light mb-6 hero-title">
+              Need Help?
+            </h2>
+            <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-2xl mx-auto">
+              From troubleshooting complex systems to implementing automated solutions, 
+              I'm here to transform your technical challenges into success stories.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+              <div className="p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all">
+                <div className="text-2xl mb-2">🔍</div>
+                <h3 className="text-xl font-semibold mb-2">Diagnose</h3>
+                <p className="text-gray-600">Quick and accurate problem identification</p>
+              </div>
+              <div className="p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all">
+                <div className="text-2xl mb-2">⚡</div>
+                <h3 className="text-xl font-semibold mb-2">Solve</h3>
+                <p className="text-gray-600">Efficient and effective solutions</p>
+              </div>
+              <div className="p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all">
+                <div className="text-2xl mb-2">🚀</div>
+                <h3 className="text-xl font-semibold mb-2">Optimize</h3>
+                <p className="text-gray-600">Continuous improvement and automation</p>
+              </div>
+            </div>
+            <Link 
+              href="mailto:mdcheung92@gmail.com"
+              className="hero-button inline-block text-white px-8 py-4 rounded-full text-sm transition-all"
+            >
+              Let's Talk →
+            </Link>
+          </div>
+        </section>
+
         {/* Stats Section */}
         <section className="mb-32">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
