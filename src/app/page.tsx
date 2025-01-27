@@ -6,15 +6,17 @@ export default function Home() {
     <main className="space-y-32">
       {/* Hero Section */}
       <section className="text-center space-y-8">
-        <div className="relative w-32 h-32 mx-auto mb-8">
-          <Image
-            src="/images/profile.jpg"
-            alt="Michael Hoang"
-            width={128}
-            height={128}
-            className="rounded-full object-cover shadow-lg"
-            priority
-          />
+        <div className="relative w-32 h-32 mx-auto mb-8 overflow-hidden">
+          <div className="w-full h-full rounded-full overflow-hidden">
+            <Image
+              src="/images/profile.jpg"
+              alt="Michael Hoang"
+              fill
+              className="object-cover"
+              sizes="(max-width: 128px) 100vw, 128px"
+              style={{ borderRadius: '50%' }}
+            />
+          </div>
           <span className="absolute -right-2 -bottom-2 text-lg">👋</span>
         </div>
         <h1 className="text-4xl font-medium max-w-2xl mx-auto gradient-text">
@@ -69,8 +71,8 @@ export default function Home() {
               description: 'Ensuring robust security practices'
             }
           ].map((service, index) => (
-            <div key={index} className="space-y-4 group">
-              <div className="w-12 h-12 bg-gray-100 rounded-lg mx-auto flex items-center justify-center group-hover:scale-110 transition-transform">
+            <div key={index} className="space-y-4 group border border-gray-200 p-4">
+              <div className="w-12 h-12 bg-gray-100 rounded-lg mx-auto flex items-center justify-center group-hover:scale-110 transition-transform border border-gray-200">
                 <span className="text-2xl">{service.icon}</span>
               </div>
               <h3 className="font-medium">{service.title}</h3>
@@ -84,7 +86,7 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="text-center space-y-8">
-        <div className="w-16 h-16 bg-gray-100 rounded-lg mx-auto flex items-center justify-center">
+        <div className="w-16 h-16 bg-gray-100 rounded-lg mx-auto flex items-center justify-center border border-gray-200">
           <span className="text-2xl">✉️</span>
         </div>
         <h2 className="text-2xl font-medium">

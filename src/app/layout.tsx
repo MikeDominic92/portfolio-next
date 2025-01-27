@@ -18,11 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} min-h-screen p-8`}>
-        <div className="rounded-container min-h-[calc(100vh-4rem)] p-8">
-          <Navbar />
-          {children}
-          <Footer />
+      <body className={inter.className}>
+        <div className="min-h-screen p-8">
+          <div className="rounded-container min-h-[calc(100vh-4rem)] p-8 bg-white">
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
         </div>
       </body>
     </html>
