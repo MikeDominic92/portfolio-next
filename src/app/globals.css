@@ -6,12 +6,49 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --accent-gradient: linear-gradient(135deg, #000 0%, #333 100%);
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: #fff;
   font-feature-settings: "salt" 1, "ss01" 1, "ss02" 1;
+}
+
+.hero-title {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.hero-button {
+  background: var(--accent-gradient);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hero-button:hover::after {
+  opacity: 1;
 }
 
 /* Profile tooltip */
@@ -26,7 +63,7 @@ body {
   top: -45px;
   left: 50%;
   transform: translateX(-50%);
-  background: #000;
+  background: var(--accent-gradient);
   color: white;
   padding: 8px 16px;
   border-radius: 20px;
@@ -36,6 +73,7 @@ body {
   visibility: hidden;
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .profile-tooltip::after {

@@ -44,19 +44,21 @@ export default function Home() {
             />
           </div>
           <div className="max-w-3xl mx-auto">
-            <h1 className="text-5xl font-light mb-8 leading-tight tracking-wide">
-              Your Technical Guardian Angel is here,
-              <span className="block mt-2 font-light">Have no fear</span>
+            <h1 className="text-5xl font-light mb-8 leading-tight tracking-wide hero-title">
+              Your Technical Guardian Angel Is Here,
+              <span className="block mt-2">Have No Fear</span>
             </h1>
             <p className="text-gray-600 mb-10 text-lg max-w-2xl mx-auto leading-relaxed">
               Technical Support Engineer who thrives on solving the unsolvable. From cloud automation to system optimization, 
               keeping your systems running while you keep running your business 🎯
             </p>
             <Link 
-              href="#contact" 
-              className="inline-block bg-black text-white px-8 py-4 rounded-full text-sm hover:bg-gray-800 transition-all hover:scale-105 transform duration-200"
+              href="https://github.com/MikeDominic92"
+              target="_blank"
+              rel="noopener noreferrer" 
+              className="hero-button inline-block text-white px-8 py-4 rounded-full text-sm transition-all"
             >
-              Learn More →
+              Explore My Work →
             </Link>
           </div>
         </section>
