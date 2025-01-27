@@ -66,13 +66,13 @@ export default function Home() {
                 rel="noopener noreferrer" 
                 className="hero-button px-8 py-4 rounded-full text-white text-sm"
               >
-                Explore My Work
+                <span>Explore My Work</span>
               </Link>
               <Link 
                 href="mailto:mdcheung92@gmail.com"
                 className="secondary-button px-8 py-4 rounded-full text-sm"
               >
-                Get in Touch
+                <span>Get in Touch</span>
               </Link>
             </div>
           </div>
@@ -140,7 +140,7 @@ export default function Home() {
               href="mailto:mdcheung92@gmail.com"
               className="hero-button inline-block text-white px-8 py-4 rounded-full text-sm"
             >
-              Let's Talk →
+              <span>Let's Talk</span> <span className="ml-1">→</span>
             </Link>
           </div>
         </section>
