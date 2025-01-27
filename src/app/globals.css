@@ -147,7 +147,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* Profile tooltip */
+/* Profile bubble tooltip */
 .profile-tooltip {
   position: relative;
   cursor: pointer;
@@ -156,37 +156,48 @@ body {
 .profile-tooltip::before {
   content: "Ain't he handsome! 😎";
   position: absolute;
-  bottom: -45px;
+  bottom: -60px;
   left: 50%;
   transform: translateX(-50%);
-  background: #000;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 14px;
+  background: white;
+  color: #333;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 16px;
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e2e8f0;
 }
 
 .profile-tooltip::after {
   content: '';
   position: absolute;
-  bottom: -25px;
+  bottom: -28px;
   left: 50%;
   transform: translateX(-50%);
-  border: 8px solid transparent;
-  border-bottom-color: #000;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-top: 2px solid #e2e8f0;
+  border-left: 2px solid #e2e8f0;
+  transform-origin: 0 0;
+  transform: rotate(45deg) translateX(-50%);
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 999;
 }
 
-.profile-tooltip:hover::before,
+.profile-tooltip:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-5px);
+}
+
 .profile-tooltip:hover::after {
   opacity: 1;
   visibility: visible;
