@@ -107,18 +107,54 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section className="text-center">
-          <h2 className="text-2xl mb-8">
-            Tell me about your<br />
-            next project
-          </h2>
-          <Link 
-            href="mailto:mdcheung92@gmail.com"
-            className="inline-block bg-black text-white px-6 py-3 rounded-full text-sm hover:bg-gray-800 transition-all"
-          >
+        <div className="text-center mt-24">
+          <h2 className="text-3xl font-bold mb-8">Tell me about your next project</h2>
+          <Link href="mailto:mdcheung92@gmail.com" className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-colors">
             Let's Talk →
           </Link>
-        </section>
+        </div>
+
+        {/* Social Links */}
+        <div className="flex justify-center items-center gap-8 mt-24">
+          <Link 
+            href="https://linkedin.com/in/mdhlee" 
+            target="_blank" 
+            className="hover:text-gray-600 transition-colors"
+          >
+            <Image 
+              src="/icons/linkedin.svg" 
+              alt="LinkedIn" 
+              width={24} 
+              height={24} 
+              className="hover:scale-110 transition-transform"
+            />
+          </Link>
+          <Link 
+            href="https://github.com/MikeDominic92" 
+            target="_blank" 
+            className="hover:text-gray-600 transition-colors"
+          >
+            <Image 
+              src="/icons/github.svg" 
+              alt="GitHub" 
+              width={24} 
+              height={24} 
+              className="hover:scale-110 transition-transform"
+            />
+          </Link>
+          <Link 
+            href="mailto:mdcheung92@gmail.com" 
+            className="hover:text-gray-600 transition-colors"
+          >
+            <Image 
+              src="/icons/gmail.svg" 
+              alt="Email" 
+              width={24} 
+              height={24} 
+              className="hover:scale-110 transition-transform"
+            />
+          </Link>
+        </div>
       </div>
     </main>
   )
