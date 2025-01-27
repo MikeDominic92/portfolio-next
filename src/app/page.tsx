@@ -21,12 +21,12 @@ export default function Home() {
             <span className="absolute -right-2 -bottom-2 text-lg">👋</span>
           </div>
           <h1 className="text-5xl font-medium gradient-text leading-tight">
-            Building digital solutions with cloud automation
+            Michael Hoang
           </h1>
-          <p className="text-gray-600 text-lg">
-            Specializing in RAG-enhanced systems and cloud infrastructure
+          <p className="text-xl text-gray-600">
+            Technical Support Engineer specializing in cloud automation and RAG-enhanced systems
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             <Link 
               href="#contact" 
               className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors hover-lift"
@@ -34,84 +34,103 @@ export default function Home() {
               Let's talk →
             </Link>
             <Link 
-              href="#work" 
+              href="/resume/michael-hoang-resume.pdf"
               className="border border-gray-200 px-8 py-4 rounded-full hover:bg-gray-50 transition-colors hover-lift"
+              target="_blank"
             >
-              View work
+              View Resume
             </Link>
+          </div>
+          <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+            <a href="mailto:MDChoang92@gmail.com" className="hover:text-gray-900">MDChoang92@gmail.com</a>
+            <a href="tel:+1-610-741-8676" className="hover:text-gray-900">+1-610-741-8676</a>
+            <span>New York</span>
           </div>
         </div>
         <div className="relative h-[500px] gradient-bg rounded-3xl overflow-hidden">
           <div className="absolute inset-0 glass p-8 flex flex-col justify-center">
             <div className="space-y-6">
               <div className="bg-white/90 p-6 rounded-xl hover-lift">
-                <h3 className="font-medium mb-2">Cloud Infrastructure</h3>
-                <p className="text-sm text-gray-600">Designing scalable solutions</p>
+                <h3 className="font-medium mb-2">Current Role</h3>
+                <p className="text-sm text-gray-600">Technical Support Engineer at AlgoPro Solutions</p>
               </div>
               <div className="bg-white/90 p-6 rounded-xl hover-lift">
-                <h3 className="font-medium mb-2">Automation</h3>
-                <p className="text-sm text-gray-600">Streamlining workflows</p>
+                <h3 className="font-medium mb-2">Experience Highlights</h3>
+                <ul className="text-sm text-gray-600 list-disc list-inside">
+                  <li>Enhanced system efficiency by 40%</li>
+                  <li>Reduced issue resolution time by 50%</li>
+                  <li>Achieved 99.9% system uptime</li>
+                </ul>
               </div>
               <div className="bg-white/90 p-6 rounded-xl hover-lift">
-                <h3 className="font-medium mb-2">RAG Systems</h3>
-                <p className="text-sm text-gray-600">Enhanced retrieval solutions</p>
+                <h3 className="font-medium mb-2">Education</h3>
+                <p className="text-sm text-gray-600">Computer Science & Applied Mathematics<br/>The Pennsylvania State University</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Partners Section */}
-      <section className="space-y-16">
-        <div className="flex flex-wrap justify-center gap-12">
-          <div className="w-[120px] h-[48px] bg-gray-100 rounded-lg partner-logo hover-lift" />
-          <div className="w-[120px] h-[48px] bg-gray-100 rounded-lg partner-logo hover-lift" />
-          <div className="w-[120px] h-[48px] bg-gray-100 rounded-lg partner-logo hover-lift" />
-          <div className="w-[120px] h-[48px] bg-gray-100 rounded-lg partner-logo hover-lift" />
+      {/* Skills Section */}
+      <section className="space-y-12">
+        <div className="text-center space-y-4">
+          <h2 className="text-3xl font-medium">Skills & Expertise</h2>
+          <p className="text-gray-600">Specialized in cloud automation and technical support</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="p-6 rounded-2xl bg-white hover-lift glass">
+            <h3 className="font-medium mb-4">Cloud & Infrastructure</h3>
+            <div className="flex flex-wrap gap-2">
+              {['AWS', 'GCP', 'Azure', 'Kubernetes', 'Docker', 'Terraform'].map((skill) => (
+                <span key={skill} className="px-3 py-1 bg-gray-100 rounded-full text-sm">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="p-6 rounded-2xl bg-white hover-lift glass">
+            <h3 className="font-medium mb-4">Development</h3>
+            <div className="flex flex-wrap gap-2">
+              {['Python', 'PowerShell', 'CI/CD', 'Git', 'Jenkins', 'ServiceNow'].map((skill) => (
+                <span key={skill} className="px-3 py-1 bg-gray-100 rounded-full text-sm">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="p-6 rounded-2xl bg-white hover-lift glass">
+            <h3 className="font-medium mb-4">Security</h3>
+            <div className="flex flex-wrap gap-2">
+              {['Cisco CCNA', 'CompTIA Sec+', 'AWS Certified', 'Vulnerability Testing'].map((skill) => (
+                <span key={skill} className="px-3 py-1 bg-gray-100 rounded-full text-sm">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="space-y-16">
+      {/* Experience Section */}
+      <section className="space-y-12">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl font-medium">Services & Expertise</h2>
-          <p className="text-gray-600 max-w-xl mx-auto">
-            Collaborate with expertise in cloud and automation to create impactful solutions
-          </p>
+          <h2 className="text-3xl font-medium">Work Experience</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {[
-            {
-              icon: '💻',
-              title: 'Cloud Infrastructure',
-              description: 'Designing and implementing scalable cloud solutions'
-            },
-            {
-              icon: '🤖',
-              title: 'Automation',
-              description: 'Building efficient automated workflows'
-            },
-            {
-              icon: '🔍',
-              title: 'RAG Systems',
-              description: 'Implementing advanced retrieval systems'
-            },
-            {
-              icon: '🛡️',
-              title: 'Security',
-              description: 'Ensuring robust security practices'
-            }
-          ].map((service, index) => (
-            <div key={index} className="p-6 rounded-2xl bg-white hover-lift glass">
-              <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
-                <span className="text-2xl">{service.icon}</span>
+        <div className="space-y-8">
+          <div className="p-6 rounded-2xl bg-white hover-lift glass">
+            <div className="flex justify-between items-start mb-4">
+              <div>
+                <h3 className="font-medium">Technical Support Engineer</h3>
+                <p className="text-gray-600">AlgoPro Solutions</p>
               </div>
-              <h3 className="font-medium mb-2">{service.title}</h3>
-              <p className="text-sm text-gray-600">
-                {service.description}
-              </p>
+              <span className="text-sm text-gray-500">Jan 2021 - Present</span>
             </div>
-          ))}
+            <ul className="list-disc list-inside text-gray-600 space-y-2">
+              <li>Enhanced system efficiency by 40% through Python-based automation</li>
+              <li>Reduced issue resolution time by 50% using RAG models</li>
+              <li>Achieved 99.9% system uptime with Kubernetes and Docker</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -122,24 +141,23 @@ export default function Home() {
           <div className="w-16 h-16 bg-white rounded-2xl mx-auto flex items-center justify-center hover-lift">
             <span className="text-2xl">✉️</span>
           </div>
-          <h2 className="text-3xl font-medium">
-            Let's create something amazing together
-          </h2>
+          <h2 className="text-3xl font-medium">Let's Connect</h2>
           <p className="text-gray-600 max-w-md mx-auto">
-            Tell me about your next project and let's bring your vision to life
+            Looking to enhance your technical support or automation solutions? Let's discuss how I can help.
           </p>
           <div className="flex justify-center gap-4">
             <Link 
               href="mailto:MDChoang92@gmail.com"
               className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors hover-lift"
             >
-              Get in touch
+              Email Me
             </Link>
             <Link 
-              href="/schedule"
+              href="https://linkedin.com/in/mdhlee-5ad649248"
               className="border border-gray-200 px-8 py-4 rounded-full hover:bg-gray-50 transition-colors hover-lift"
+              target="_blank"
             >
-              Schedule a call
+              LinkedIn
             </Link>
           </div>
         </div>
