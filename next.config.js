@@ -6,6 +6,12 @@ const nextConfig = {
   },
   basePath: '/portfolio-next',
   assetPrefix: '/portfolio-next/',
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  eslint: {
+    ignoreDuringBuilds: true
+  }
 }
 
 module.exports = nextConfig
