@@ -11,6 +11,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: #fff;
+  font-feature-settings: "salt" 1, "ss01" 1, "ss02" 1;
 }
 
 /* Profile tooltip */
@@ -27,13 +28,14 @@ body {
   transform: translateX(-50%);
   background: #000;
   color: white;
-  padding: 8px 12px;
+  padding: 8px 16px;
   border-radius: 20px;
   font-size: 14px;
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
+  letter-spacing: 0.5px;
 }
 
 .profile-tooltip::after {
@@ -54,4 +56,14 @@ body {
 .profile-tooltip:hover::after {
   opacity: 1;
   visibility: visible;
+}
+
+/* Add elegant transitions */
+h1, p, a {
+  transition: all 0.3s ease;
+}
+
+/* Enhance link interactions */
+a:hover {
+  letter-spacing: 0.5px;
 }

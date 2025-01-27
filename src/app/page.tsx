@@ -34,25 +34,31 @@ export default function Home() {
 
         {/* Hero Section */}
         <section className="text-center mb-32">
-          <div className="relative w-32 h-32 mx-auto mb-8 profile-tooltip">
+          <div className="relative w-32 h-32 mx-auto mb-12 profile-tooltip">
             <Image
               src="/images/profile.jpg"
               alt="Michael Hoang"
               width={128}
               height={128}
-              className="rounded-full"
+              className="rounded-full shadow-lg"
             />
           </div>
-          <h1 className="text-4xl font-bold mb-6">
-            Your Technical Guardian Angel is here, Have no fear 💫
-          </h1>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Technical Support Engineer who thrives on solving the unsolvable. From cloud automation to system optimization, 
-            keeping your systems running while you keep running your business 🎯
-          </p>
-          <Link href="#contact" className="inline-block bg-black text-white px-6 py-3 rounded-full text-sm hover:bg-gray-800 transition-all">
-            Learn More →
-          </Link>
+          <div className="max-w-3xl mx-auto">
+            <h1 className="text-5xl font-light mb-8 leading-tight tracking-wide">
+              Your Technical Guardian Angel is here,
+              <span className="block mt-2 font-light">Have no fear</span>
+            </h1>
+            <p className="text-gray-600 mb-10 text-lg max-w-2xl mx-auto leading-relaxed">
+              Technical Support Engineer who thrives on solving the unsolvable. From cloud automation to system optimization, 
+              keeping your systems running while you keep running your business 🎯
+            </p>
+            <Link 
+              href="#contact" 
+              className="inline-block bg-black text-white px-8 py-4 rounded-full text-sm hover:bg-gray-800 transition-all hover:scale-105 transform duration-200"
+            >
+              Learn More →
+            </Link>
+          </div>
         </section>
 
         {/* Partners Section */}
