@@ -132,8 +132,8 @@ main {
   top: -45px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--color-primary);
-  color: white;
+  background: white;
+  color: var(--color-primary);
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 14px;
@@ -143,6 +143,7 @@ main {
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
   box-shadow: 0 4px 20px rgba(230, 126, 34, 0.2);
+  border: 1px solid var(--color-primary);
 }
 
 .profile-tooltip::after {
@@ -153,7 +154,7 @@ main {
   transform: translateX(-50%);
   border-width: 5px;
   border-style: solid;
-  border-color: var(--color-primary) transparent transparent transparent;
+  border-color: white transparent transparent transparent;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
