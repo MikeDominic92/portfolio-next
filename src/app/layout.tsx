@@ -1,14 +1,12 @@
+import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
-import Navbar from '@/components/layout/Navbar'
-import Footer from '@/components/layout/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Michael Hoang - Technical Support Engineer',
-  description: 'Technical Support Engineer specializing in cloud automation and RAG-enhanced systems',
+  title: 'Michael Hoang - Digital Product Designer',
+  description: 'Building digital products, brands, and experience.',
 }
 
 export default function RootLayout({
@@ -19,13 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="min-h-screen p-8">
-          <div className="rounded-container min-h-[calc(100vh-4rem)] p-8 bg-white">
-            <Navbar />
-            {children}
-            <Footer />
-          </div>
-        </div>
+        {children}
       </body>
     </html>
   )

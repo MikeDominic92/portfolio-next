@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --foreground: 0 0% 0%;
-  --background: 0 0% 98%;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
 body {
-  color: hsl(var(--foreground));
-  background: hsl(var(--background));
-  font-feature-settings: "rlig" 1, "calt" 1;
+  color: rgb(var(--foreground-rgb));
+  background: #fff;
 }
 
 /* Profile tooltip */
