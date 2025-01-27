@@ -35,13 +35,20 @@ export default function Home() {
         {/* Hero Section */}
         <section className="text-center mb-32">
           <div className="relative w-32 h-32 mx-auto mb-12 profile-tooltip">
-            <Image
-              src="/images/profile.jpg"
-              alt="Michael Hoang"
-              width={128}
-              height={128}
-              className="rounded-full shadow-lg"
-            />
+            <Link 
+              href="https://www.linkedin.com/in/michael-hoang-85b070b8/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <Image
+                src="/images/profile.jpg"
+                alt="Michael Hoang"
+                width={128}
+                height={128}
+                className="rounded-full shadow-lg transition-transform duration-300 hover:scale-105"
+              />
+            </Link>
           </div>
           <div className="max-w-3xl mx-auto">
             <h1 className="text-5xl font-light mb-8 leading-tight tracking-wide hero-title">
