@@ -1,11 +1,10 @@
-# Technical Guardian Angel Portfolio 🚀
+# Your Technical Guardian Angel Portfolio 🚀
 
 Welcome to my portfolio website repository! This site showcases my expertise as a Technical Support Engineer who specializes in solving complex technical challenges and optimizing systems.
 
 ## 🌟 Live Demo
 
-Check out the live site: mdhoangportfolio.netlify.app/
-
+Check out the live site: https://mdhoangportfolio.netlify.app/
 ## 🛠️ Built With
 
 - **React** - Frontend library
