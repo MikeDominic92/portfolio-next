@@ -4,7 +4,7 @@ Welcome to my portfolio website repository! This site showcases my expertise as 
 
 ## 🌟 Live Demo
 
-Check out the live site: [Technical Guardian Angel Portfolio](mdhoangportfolio.netlify.app)
+Check out the live site: mdhoangportfolio.netlify.app/
 
 ## 🛠️ Built With
 
